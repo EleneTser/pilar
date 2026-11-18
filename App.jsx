@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import photo from "./assets/pilar-session.jpg";
-import founder from "./assets/founder.jpg";
-import bga from "./assets/bga-logo.png";
-import roundtable from "./assets/roundtable.jpg";
-import soon from "./assets/coming-soon.jpg";
-import logo from "./assets/pilar-logo-sm.png";
+import photo from "./pilar-session.jpg";
+import founder from "./founder.jpg";
+import bga from "./bga-logo.png";
+import roundtable from "./roundtable.jpg";
+import soon from "./coming-soon.jpg";
+import logo from "./pilar-logo-sm.png";
 
 /* Paste your Google Form link here when it is ready */
 const FORM_URL = ""; // e.g. "https://forms.gle/xxxx"; while empty, the button says it is not available yet

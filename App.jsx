@@ -9,9 +9,6 @@ import logo from "./pilar-logo-sm.png";
 /* Paste your Google Form link here when it is ready */
 const FORM_URL = ""; // e.g. "https://forms.gle/xxxx"; while empty, the button says it is not available yet
 
-/* Ideas & comments: free key from https://web3forms.com (enter pilarsociety1@gmail.com) - submissions arrive in that inbox */
-const IDEAS_KEY = "";
-
 const NAV = [
   ["Home", "#top"], ["Initiatives", "#initiatives"], ["About", "#about"],
   ["Events", "#events"],
@@ -189,60 +186,6 @@ function PilarIBody() {
       <div className="speakers"><h4>Our Guest Speakers</h4>{PEOPLE.map(([n, r]) => <div key={n}><b>{n}</b><em>{r}</em></div>)}</div>
       <div className="speakers crew"><h4>Moderator &amp; Photographer</h4>{CREW.map(([n, r]) => <div key={n}><b>{n}</b><em>{r}</em></div>)}</div>
     </div>
-  );
-}
-
-function Ideas() {
-  const [state, setState] = useState("idle"); // idle | sending | done | error | off
-  const send = async (e) => {
-    e.preventDefault();
-    if (!IDEAS_KEY) { setState("off"); return; }
-    const f = e.currentTarget;
-    const d = new FormData(f);
-    if (d.get("botcheck")) return;
-    setState("sending");
-    try {
-      const r = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: IDEAS_KEY,
-          subject: "New idea / comment for PILAR Society",
-          from_name: d.get("name") || "Anonymous",
-          name: d.get("name") || "Anonymous",
-          email: d.get("email") || "not given",
-          message: d.get("message"),
-        }),
-      });
-      const j = await r.json();
-      if (j.success) { setState("done"); f.reset(); } else setState("error");
-    } catch { setState("error"); }
-  };
-  return (
-    <section id="ideas" className="ideas">
-      <div className="wrap">
-        <Reveal className="head"><h2>Share an idea</h2><span className="sub">Creative thoughts &amp; comments welcome</span></Reveal>
-        <Reveal delay={120}>
-          <form className="idea-form" onSubmit={send}>
-            <p>Have a topic for a panel, a creative format, or feedback on what we do? Tell us. We read everything.</p>
-            <div className="two">
-              <label>Name <small>(optional)</small><input name="name" type="text" autoComplete="name" /></label>
-              <label>Email <small>(optional)</small><input name="email" type="email" autoComplete="email" /></label>
-            </div>
-            <label>Your idea or comment<textarea name="message" rows="5" required placeholder="Write here…" /></label>
-            <input type="checkbox" name="botcheck" tabIndex="-1" autoComplete="off" style={{ display: "none" }} />
-            <div className="idea-actions">
-              <button className="btn gold" type="submit" disabled={state === "sending"}>{state === "sending" ? "Sending…" : "Send"} <span className="go">→</span></button>
-              <p className={`notice ${state !== "idle" && state !== "sending" ? "show" : ""}`} role="status">
-                {state === "done" && "Thank you! Your message has been received."}
-                {state === "error" && "Something went wrong. Please try again in a moment."}
-                {state === "off" && "Sending isn’t available yet. Please check back soon."}
-              </p>
-            </div>
-          </form>
-        </Reveal>
-      </div>
-    </section>
   );
 }
 
@@ -445,8 +388,6 @@ export default function App() {
           </div>
         </section>
       </main>}
-
-      <Ideas />
 
       <footer>
         <div className="wrap">

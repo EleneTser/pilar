@@ -172,6 +172,7 @@ function Header() {
   );
 }
 
+const CREW = [["Nitsa Nakopia", "Moderator"], ["Kyril Iyashin", "Photographer"]];
 const PEOPLE = [["Tamta Gelashvili", "Advocate"], ["Otar Antia", "Economist"], ["Gizo Chelidze", "International Relations Expert"]];
 function PilarIBody() {
   return (
@@ -183,6 +184,7 @@ function PilarIBody() {
         <p>Designed for students in Grades 10 and 11, the discussion offered a unique opportunity to engage with distinguished professionals, explore real-world questions, and gain insight into the broader connections between politics, economics, and law.</p>
       </div>
       <div className="speakers"><h4>Our Guest Speakers</h4>{PEOPLE.map(([n, r]) => <div key={n}><b>{n}</b><em>{r}</em></div>)}</div>
+      <div className="speakers crew"><h4>Moderator &amp; Photographer</h4>{CREW.map(([n, r]) => <div key={n}><b>{n}</b><em>{r}</em></div>)}</div>
     </div>
   );
 }
@@ -227,7 +229,7 @@ function PanelPage() {
       <div className="wrap rt-team">
         <Reveal className="head"><h2>Our Team</h2></Reveal>
         <div className="team">
-          {[["Anastasia Datiashvili", "PR & Media"], ["Nini Kalandarishvili", "Academic Content & Research Coordinator"], ["Kyril Iyashin", "Photographer"], ["Nitsa Nakopia", "Moderator"]].map(([n, r], i) => (
+          {[["Anastasia Datiashvili", "PR & Media"], ["Nini Kalandarishvili", "Academic Content & Research Coordinator"]].map(([n, r], i) => (
             <Reveal key={n} delay={i * 100}><b>{n}</b><em>{r}</em></Reveal>
           ))}
         </div>

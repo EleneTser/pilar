@@ -363,3 +363,9 @@ footer{padding-bottom:calc(34px + env(safe-area-inset-bottom))}
   .card::after{display:none}
   a.row.link:hover{padding-left:0;padding-right:0;background:none}
 }
+
+.speakers.crew{grid-template-columns:auto repeat(2,1fr);padding-top:22px;margin-top:-4px}
+.speakers.crew div:last-child{grid-column:auto}
+.team{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.speakers.crew{grid-template-columns:1fr}.team{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.team{grid-template-columns:1fr}}

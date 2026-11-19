@@ -369,3 +369,8 @@ footer{padding-bottom:calc(34px + env(safe-area-inset-bottom))}
 .team{grid-template-columns:repeat(2,1fr)}
 @media(max-width:900px){.speakers.crew{grid-template-columns:1fr}.team{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.team{grid-template-columns:1fr}}
+
+/* soft bottom fade: photo melts into the page, no visible edge */
+.hero-bg{-webkit-mask-image:linear-gradient(180deg,#000 0,#000 55%,rgba(0,0,0,.6) 72%,rgba(0,0,0,.25) 86%,transparent 100%);mask-image:linear-gradient(180deg,#000 0,#000 55%,rgba(0,0,0,.6) 72%,rgba(0,0,0,.25) 86%,transparent 100%)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:48%;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(11,21,34,0) 0,rgba(11,21,34,.35) 30%,rgba(11,21,34,.72) 60%,rgba(11,21,34,.93) 85%,var(--bg) 100%)}

@@ -19,7 +19,7 @@ const INITIATIVES = [
     icon: <><rect x="24" y="8" width="16" height="30" rx="8" /><path d="M16 30c0 10 7 16 16 16s16-6 16-16M32 46v10M22 56h20" /></> },
   { pic: soon, fit: "soon", alt: "Coming soon", title: "PILAR Mock Court", text: "A student competition simulating an international court proceeding.",
     icon: <path d="M32 8v44M12 16h40M12 16l-8 20a8 8 0 0 0 16 0zM52 16l-8 20a8 8 0 0 0 16 0zM20 54h24" /> },
-  { pic: soon, fit: "soon", alt: "Coming soon", title: "MUN Workshops", text: "Training sessions to build the skills and confidence needed for Model United Nations conferences.",
+  { pic: soon, fit: "soon", alt: "Coming soon", title: "Academic Workshops", text: "Training sessions to build the skills and confidence needed for Model United Nations conferences.",
     icon: <><circle cx="32" cy="32" r="22" /><ellipse cx="32" cy="32" rx="10" ry="22" /><path d="M10 32h44M14 20h36M14 44h36" /></> },
 ];
 
@@ -35,7 +35,7 @@ const AREAS = [
 const EVENTS = [
   { when: "Coming soon", title: "Panel Discussion", note: "Expert speakers, open Q&A", href: "#panel-discussions" },
   { when: "Coming soon", title: "PILAR Mock Court", note: "Team applications open to students" },
-  { when: "Coming soon", title: "MUN Workshop", note: "Public speaking, research and resolutions" },
+  { when: "Coming soon", title: "Academic Workshop", note: "Public speaking, research and resolutions" },
 ];
 
 /* Adds the "in" class once the element scrolls into view */

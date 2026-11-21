@@ -19,7 +19,7 @@ const INITIATIVES = [
     icon: <><rect x="24" y="8" width="16" height="30" rx="8" /><path d="M16 30c0 10 7 16 16 16s16-6 16-16M32 46v10M22 56h20" /></> },
   { pic: soon, fit: "soon", alt: "Coming soon", title: "PILAR Mock Court", text: "A student competition simulating an international court proceeding.",
     icon: <path d="M32 8v44M12 16h40M12 16l-8 20a8 8 0 0 0 16 0zM52 16l-8 20a8 8 0 0 0 16 0zM20 54h24" /> },
-  { pic: soon, fit: "soon", alt: "Coming soon", title: "Academic Journal", text: "A student-written journal publishing research, essays and analysis on politics, international relations, law and economics.",
+  { pic: soon, fit: "soon", alt: "Coming soon", title: "Academic Journal", text: "A student-led academic journal publishing critical book analysis, independent research papers, and interdisciplinary perspectives on politics, international relations, law, economics, and other social sciences.",
     icon: <><circle cx="32" cy="32" r="22" /><ellipse cx="32" cy="32" rx="10" ry="22" /><path d="M10 32h44M14 20h36M14 44h36" /></> },
 ];
 
